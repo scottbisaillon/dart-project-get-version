@@ -1,26 +1,28 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "dart-project-get-version",
+  "version": "1.0.0",
   "private": true,
-  "description": "TypeScript template action",
-  "main": "lib/main.js",
+  "description": "Github Action that extracts the version found in pubspec.yaml to action outputs.",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "format": "prettier --write '**/*.ts'",
-    "format-check": "prettier --check '**/*.ts'",
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "package": "ncc build --source-map --license licenses.txt",
+    "package": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
     "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+    "all": "npm run build && npm run format && npm run lint && npm run package"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/scottbisaillon/dart-project-get-version.git"
   },
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "setup",
+    "dart",
+    "flutter"
   ],
   "author": "",
   "license": "MIT",
