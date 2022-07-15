@@ -1,0 +1,15 @@
+name: EXAMPLE
+description: Example pubspec file
+version: 1.0.0+15
+publish_to: none
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  flutter_localizations:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  generate: true
